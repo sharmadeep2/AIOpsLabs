@@ -27,13 +27,21 @@ Make sure you have the following installed:
    # OR use the configured Python environment path
    ```
 
-3. **Verify the kind cluster is running**:
+3. **Configure AIOpsLab**:
+   ```bash
+   cd AIOpsLab/aiopslab
+   cp config.yml.example config.yml
+   # Edit config.yml to set k8s_host: kind and your username
+   ```
+
+4. **Verify the kind cluster is running**:
+4. **Verify the kind cluster is running**:
    ```bash
    kubectl cluster-info --context kind-kind
    kubectl get nodes
    ```
 
-4. **Run the AIOpsLab CLI**:
+5. **Run the AIOpsLab CLI**:
    ```bash
    python cli.py
    ```
